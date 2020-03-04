@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="TPACIENTE">
+        <item>PRIVADA</item>
+        <item>CLUB SALUD</item>
+        <item>BANCO</item>
+        <item>ECO ANATOMICO</item>
+    </string-array>
+</resources>

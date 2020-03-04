@@ -1,0 +1,9 @@
+<resources>
+
+
+    <string name="app_name">Consultorio</string>
+    <string name="title_activity_pestanas_pac">PestanasPacActivity</string>
+    <string name="tab_text_1">Información Principal</string>
+    <string name="tab_text_2">Información Gral</string>
+
+</resources>

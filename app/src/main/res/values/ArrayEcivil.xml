@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ECIVIL">
+        <item>CASADA</item>
+        <item>SOLTERA</item>
+        <item>VIUDA</item>
+        <item>DIVORCIADA</item>
+    </string-array>
+</resources>
