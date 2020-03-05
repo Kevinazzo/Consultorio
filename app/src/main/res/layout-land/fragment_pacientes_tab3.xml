@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/constraintLayout"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/consultorio_background_blue"
+	tools:context="com.Milton.Consultorio.Fragment.Pacientes_Tab3"
+	tools:ignore="HardcodedText">
+
+	<ScrollView
+		android:id="@+id/ScrollView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<LinearLayout
+			android:id="@+id/VerticalLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:id="@+id/Tab3_Row_1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:baselineAligned="false"
+				android:orientation="horizontal">
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="10dp"
+						android:layout_marginVertical="5dp"
+						android:autoSizeTextType="uniform"
+						android:text="Titular de la Tarjeta"
+						android:textColor="@color/DefaultTextColor"
+						android:textSize="@dimen/TextSize_Small" />
+
+					<EditText
+						android:id="@+id/Tab3_EditT_Titular"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="10dp"
+						android:autoSizeTextType="uniform"
+						android:autofillHints="Nombre del paciente"
+						android:hint="..."
+						android:inputType="textPersonName"
+						android:textColor="#FFFFFF"
+						android:textColorHint="#FFFFFF" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="10dp"
+						android:layout_marginVertical="5dp"
+						android:autoSizeTextType="uniform"
+						android:text="Número de Tarjeta"
+						android:textColor="@color/DefaultTextColor"
+						android:textSize="@dimen/TextSize_Small" />
+
+					<EditText
+						android:id="@+id/Tab3_EditT_NumTarjeta"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="10dp"
+						android:autoSizeTextType="uniform"
+						android:autofillHints="Cónyugue"
+						android:hint="..."
+						android:inputType="textPersonName"
+						android:textColor="#FFFFFF"
+						android:textColorHint="#FFFFFF" />
+				</LinearLayout>
+			</LinearLayout>
+
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginHorizontal="10dp"
+				android:layout_marginVertical="5dp"
+				android:autoSizeTextType="uniform"
+				android:text="Empresa"
+				android:textColor="@color/DefaultTextColor"
+				android:textSize="@dimen/TextSize_Small" />
+
+			<EditText
+				android:id="@+id/Tab3_EditT_Empresa"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:layout_marginRight="10dp"
+				android:layout_marginBottom="10dp"
+				android:autoSizeTextType="uniform"
+				android:autofillHints="Cónyugue"
+				android:hint="..."
+				android:inputType="textPersonName"
+				android:textColor="#FFFFFF"
+				android:textColorHint="#FFFFFF" />
+
+			<LinearLayout
+				android:id="@+id/Tab3_Row_3"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:orientation="vertical">
+
+					<TextView
+						android:id="@+id/Tab3_Txt_Vigencia"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginVertical="5dp"
+						android:layout_marginStart="10dp"
+						android:layout_marginEnd="10dp"
+						android:backgroundTint="@color/colorPrimary"
+						android:hint="Vigencia"
+						android:textColor="#FFFFFF"
+						android:textColorHint="#FFFFFF"
+						android:textSize="@dimen/TextSize_Small2"
+						android:textStyle="bold" />
+
+					<Button
+						android:id="@+id/Tab3_Btn_SelectVigencia"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="20dp"
+						android:layout_marginBottom="10dp"
+						android:layout_marginEnd="20dp"
+						android:layout_marginStart="10dp"
+						android:background="@drawable/button_rounded_border"
+						android:text="SELECCIONAR VIGENCIA"
+						android:textColor="#FFF"
+						android:textSize="@dimen/TextSize_Small"
+						android:textStyle="bold" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="3"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="10dp"
+						android:layout_marginVertical="5dp"
+						android:autoSizeTextType="uniform"
+						android:text="Otros Datos"
+						android:textColor="@color/DefaultTextColor"
+						android:textSize="@dimen/TextSize_Small" />
+
+					<EditText
+						android:id="@+id/Tab3_EditT_Otro"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="10dp"
+						android:layout_marginBottom="10dp"
+						android:autofillHints=""
+						android:backgroundTint="@color/colorPrimary"
+						android:inputType="text|phone"
+						android:lines="5"
+						android:textColor="#FFFFFF"
+						android:textColorHint="#FFFFFF"
+						android:textSize="@dimen/TextSize_Small"
+						android:textStyle="italic" />
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

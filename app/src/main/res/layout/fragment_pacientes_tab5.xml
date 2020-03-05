@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/constraintLayout"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/consultorio_background_blue"
+	tools:context="com.Milton.Consultorio.Fragment.Pacientes_Tab5"
+	tools:ignore="HardcodedText">
+
+	<ScrollView
+		android:id="@+id/ScrollView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<LinearLayout
+			android:id="@+id/VerticalLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:id="@+id/Tab5_Row_1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:baselineAligned="false"
+				android:orientation="horizontal">
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="10dp"
+						android:layout_marginVertical="5dp"
+						android:autoSizeTextType="uniform"
+						android:text="G-"
+						android:textColor="@color/DefaultTextColor"
+						android:textSize="@dimen/TextSize_Small" />
+
+					<EditText
+						android:id="@+id/Tab5_EditT__G-"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="10dp"
+						android:autoSizeTextType="uniform"
+						android:autofillHints="Nombre del paciente"
+						android:hint="..."
+						android:inputType="textPersonName"
+						android:textColor="@color/DefaultTextColor"
+						android:textColorHint="@color/DefaultTextColor" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="10dp"
+						android:layout_marginVertical="5dp"
+						android:autoSizeTextType="uniform"
+						android:text="P-"
+						android:textColor="@color/DefaultTextColor"
+						android:textSize="@dimen/TextSize_Small" />
+
+					<EditText
+						android:id="@+id/Tab5_EditT__P-"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="10dp"
+						android:autoSizeTextType="uniform"
+						android:autofillHints="Cónyugue"
+						android:hint="..."
+						android:inputType="textPersonName"
+						android:textColor="@color/DefaultTextColor"
+						android:textColorHint="@color/DefaultTextColor" />
+				</LinearLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/Tab5_Row_2"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:baselineAligned="false"
+				android:orientation="horizontal">
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="10dp"
+						android:layout_marginVertical="5dp"
+						android:autoSizeTextType="uniform"
+						android:text="C-"
+						android:textColor="@color/DefaultTextColor"
+						android:textSize="@dimen/TextSize_Small" />
+
+					<EditText
+						android:id="@+id/Tab5_EditT__C-"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="10dp"
+						android:autoSizeTextType="uniform"
+						android:autofillHints="Nombre del paciente"
+						android:hint="..."
+						android:inputType="textPersonName"
+						android:textColor="@color/DefaultTextColor"
+						android:textColorHint="@color/DefaultTextColor" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="10dp"
+						android:layout_marginVertical="5dp"
+						android:autoSizeTextType="uniform"
+						android:text="A-"
+						android:textColor="@color/DefaultTextColor"
+						android:textSize="@dimen/TextSize_Small" />
+
+					<EditText
+						android:id="@+id/Tab5_EditT__A-"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="10dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="10dp"
+						android:autoSizeTextType="uniform"
+						android:autofillHints="Cónyugue"
+						android:hint="..."
+						android:inputType="textPersonName"
+						android:textColor="@color/DefaultTextColor"
+						android:textColorHint="@color/DefaultTextColor" />
+				</LinearLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/Tab5_Row_3"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<TextView
+					android:id="@+id/Tab5_Txt_FUM"
+					android:layout_width="0dp"
+					android:layout_weight="1"
+					android:layout_height="wrap_content"
+					android:layout_marginHorizontal="10dp"
+					android:layout_marginVertical="10dp"
+					android:backgroundTint="@color/colorPrimary"
+					android:hint="FUM"
+					android:textColor="@color/DefaultTextColor"
+					android:textAlignment="center"
+					android:textColorHint="@color/DefaultTextColor"
+					android:textSize="@dimen/TextSize_Small2"
+					android:textStyle="bold" />
+
+				<Button
+					android:id="@+id/Tab5_Btn_SelectFUM"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:layout_marginHorizontal="20dp"
+					android:layout_marginVertical="10dp"
+					android:layout_marginEnd="25dp"
+					android:layout_marginRight="25dp"
+					android:background="@drawable/button_rounded_border"
+					android:text="SELECCIONAR FUM"
+					android:textColor="#FFF"
+					android:textSize="@dimen/TextSize_Small"
+					android:textStyle="bold" />
+			</LinearLayout>
+
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="vertical">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginHorizontal="10dp"
+					android:layout_marginVertical="5dp"
+					android:autoSizeTextType="uniform"
+					android:text="Otros Datos"
+					android:textColor="@color/DefaultTextColor"
+					android:textSize="@dimen/TextSize_Small" />
+
+				<EditText
+					android:id="@+id/Tab5_EditT_Otro"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginHorizontal="10dp"
+					android:layout_marginBottom="10dp"
+					android:autofillHints=""
+					android:backgroundTint="@color/colorPrimary"
+					android:inputType="text|phone"
+					android:lines="5"
+					android:textColor="@color/DefaultTextColor"
+					android:textColorHint="@color/DefaultTextColor"
+					android:textSize="@dimen/TextSize_Small"
+					android:textStyle="italic" />
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/constraintLayout"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@color/consultorio_background_blue"
+	tools:context="com.Milton.Consultorio.Fragment.Pacientes_Tab1"
+	tools:ignore="HardcodedText">
+
+	<ScrollView
+		android:id="@+id/ScrollView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toTopOf="parent">
+
+		<LinearLayout
+			android:id="@+id/VerticalLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:id="@+id/Tab2_Row_1"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:baselineAligned="false"
+				android:orientation="horizontal">
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="20dp"
+						android:layout_marginVertical="5dp"
+						android:autoSizeTextType="uniform"
+						android:text="Nombre"
+						android:textColor="@color/DefaultTextColor"
+						android:textSize="@dimen/TextSize_Small2" />
+
+					<EditText
+						android:id="@+id/Tab1_EditT_Paciente"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="20dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="20dp"
+						android:autoSizeTextType="uniform"
+						android:autofillHints="Nombre del paciente"
+						android:hint="..."
+						android:inputType="textPersonName"
+						android:textColor="#FFFFFF"
+						android:textColorHint="#FFFFFF" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="20dp"
+						android:layout_marginVertical="5dp"
+						android:autoSizeTextType="uniform"
+						android:text="Dirección de correo"
+						android:textColor="@color/DefaultTextColor"
+						android:textSize="@dimen/TextSize_Small2" />
+
+					<EditText
+						android:id="@+id/Tab2_EditT_Correo"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="20dp"
+						android:layout_marginRight="10dp"
+						android:layout_marginBottom="20dp"
+						android:autoSizeTextType="uniform"
+						android:autofillHints="Cónyugue"
+						android:hint="..."
+						android:inputType="textPersonName"
+						android:textColor="#FFFFFF"
+						android:textColorHint="#FFFFFF" />
+				</LinearLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/Tab2_Row_2"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:baselineAligned="false"
+				android:orientation="horizontal">
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="20dp"
+						android:layout_marginVertical="5dp"
+						android:autoSizeTextType="uniform"
+						android:text="R.F.C."
+						android:textColor="@color/DefaultTextColor"
+						android:textSize="@dimen/TextSize_Small2" />
+
+					<EditText
+						android:id="@+id/Tab2_EditT_RFC"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="20dp"
+						android:layout_marginBottom="20dp"
+						android:autofillHints=""
+						android:backgroundTint="@color/colorPrimary"
+						android:hint="..."
+						android:inputType="text|phone"
+						android:textColor="#FFFFFF"
+						android:textColorHint="#FFFFFF"
+						android:textSize="@dimen/TextSize_Small2"
+						android:textStyle="italic" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="20dp"
+						android:layout_marginVertical="5dp"
+						android:autoSizeTextType="uniform"
+						android:text="Domicilio"
+						android:textColor="@color/DefaultTextColor"
+						android:textSize="@dimen/TextSize_Small2" />
+
+					<EditText
+						android:id="@+id/Tab2_EditT_Dom"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="20dp"
+						android:layout_marginBottom="20dp"
+						android:autofillHints=""
+						android:backgroundTint="@color/colorPrimary"
+						android:hint="..."
+						android:inputType="textEmailAddress"
+						android:textColor="#FFFFFF"
+						android:textColorHint="#FFFFFF"
+						android:textSize="@dimen/TextSize_Small2"
+						android:textStyle="italic" />
+				</LinearLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:id="@+id/Tab2_Row_3"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:baselineAligned="false"
+				android:orientation="horizontal">
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="match_parent"
+					android:layout_weight="1"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginHorizontal="20dp"
+						android:layout_marginVertical="5dp"
+						android:autoSizeTextType="uniform"
+						android:text="Otros Datos"
+						android:textColor="@color/DefaultTextColor"
+						android:textSize="@dimen/TextSize_Small2" />
+
+					<EditText
+						android:id="@+id/Tab2_EditT_Otro"
+						android:layout_width="match_parent"
+						android:layout_height="150dp"
+						android:layout_marginHorizontal="20dp"
+						android:layout_marginBottom="20dp"
+						android:autofillHints=""
+						android:backgroundTint="@color/colorPrimary"
+						android:inputType="text|phone"
+						android:textColor="#FFFFFF"
+						android:textColorHint="#FFFFFF"
+						android:textSize="@dimen/TextSize_Small2"
+						android:textStyle="italic" />
+				</LinearLayout>
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:baselineAligned="false">
+
+				<LinearLayout
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:orientation="horizontal">
+
+					<Button
+						android:id="@+id/Tab2_Btn_AgregarFactura"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginStart="20dp"
+						android:layout_marginLeft="20dp"
+						android:layout_marginVertical="20dp"
+						android:layout_marginEnd="20dp"
+						android:layout_marginRight="20dp"
+						android:background="@drawable/button_rounded"
+						android:text="AGREGAR FACTURA"
+						android:textColor="@color/DefaultTextColor"
+						android:textSize="@dimen/TextSize_Large"
+						android:textStyle="bold" />
+				</LinearLayout>
+
+			</LinearLayout>
+	</LinearLayout>
+</ScrollView>
+
+
+	</androidx.constraintlayout.widget.ConstraintLayout>

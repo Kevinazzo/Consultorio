@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#374253"
-    tools:context=".TabsPacientesActivity">
+    tools:context="com.Milton.Consultorio.Activity.TabsPacientesActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

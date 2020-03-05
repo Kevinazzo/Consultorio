@@ -1,995 +1,709 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#374253"
-    tools:context=".TabsPacientesActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/EDTnombre"
-            android:layout_width="300dp"
-            android:layout_height="67dp"
-            android:layout_marginStart="400dp"
-            android:layout_marginLeft="400dp"
-            android:layout_marginTop="30dp"
-            android:backgroundTint="@color/colorPrimary"
-            android:ems="10"
-            android:hint="  Nombre del paciente"
-            android:inputType="textPersonName"
-            android:textColor="#FFFFFF"
-            android:textColorHint="#FFFFFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/BTNbuscar"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/button_rounded"
-            android:text="BUSCAR"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
-
-        <Button
-            android:id="@+id/BTNagregar"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="60dp"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/button_rounded_border"
-            android:text="NUEVO"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/BTNactualizar"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="300dp"
-            android:layout_marginLeft="300dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="410dp"
-            android:layout_marginRight="410dp"
-            android:background="@drawable/button_rounded_border"
-            android:text="ACTUALIZAR"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/BTNeliminar"
-            app:layout_constraintStart_toEndOf="@+id/BTNagregar"
-            tools:ignore="MissingConstraints" />
-
-        <Button
-            android:id="@+id/BTNeliminar"
-            android:layout_width="150dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginRight="50dp"
-            android:background="@drawable/button_rounded_border"
-            android:text="ELIMINAR"
-            android:textColor="#FFF"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:ignore="MissingConstraints" />
-
-    </LinearLayout>
-
-    <TabHost
-        android:id="@android:id/tabhost"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TabWidget
-            android:id="@android:id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"/>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@android:id/tabcontent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:id="@+id/tab1">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/TXTnombre"
-                            android:layout_width="300dp"
-                            android:layout_height="60dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginRight="10dp"
-                            android:ems="10"
-                            android:text="  Nombre del Paciente"
-                            android:textColor="#F38D27"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <EditText
-                            android:id="@+id/TXTconyuge"
-                            android:layout_width="300dp"
-                            android:layout_height="60dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginRight="16dp"
-                            android:ems="10"
-                            android:text="  Nombre del Conyuge"
-                            android:textColor="#F38D27"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                    </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <EditText
-                        android:id="@+id/EDTnombre2"
-                        android:layout_width="300dp"
-                        android:layout_height="60dp"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginRight="10dp"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:ems="10"
-                        android:hint="  Paciente"
-                        android:inputType="textPersonName"
-                        android:textColor="#FFFFFF"
-                        android:textColorHint="#FFFFFF"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <EditText
-                        android:id="@+id/EDTconyugue"
-                        android:layout_width="300dp"
-                        android:layout_height="60dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="16dp"
-                        android:layout_marginRight="16dp"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:ems="10"
-                        android:hint="  Conyuge"
-                        android:inputType="textPersonName"
-                        android:textColor="#FFFFFF"
-                        android:textColorHint="#FFFFFF"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent" />
-
-                </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="10dp">
-
-                        <Spinner
-                            android:id="@+id/SPecivil"
-                            android:layout_width="122dp"
-                            android:layout_height="40dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:backgroundTint="@color/colorPrimary" />
-
-                        <Spinner
-                            android:id="@+id/SPtipopaciente"
-                            android:layout_width="122dp"
-                            android:layout_height="40dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginRight="5dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:backgroundTint="@color/colorPrimary" />
-
-                        <Spinner
-                            android:id="@+id/SPsexo"
-                            android:layout_width="122dp"
-                            android:layout_height="40dp"
-                            android:layout_marginStart="1dp"
-                            android:layout_marginLeft="1dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="1dp"
-                            android:layout_marginRight="1dp"
-                            app:layout_constraintEnd_toStartOf="@+id/SPtipopaciente"
-                            app:layout_constraintStart_toEndOf="@+id/SPecivil"
-                            android:backgroundTint="@color/colorPrimary" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="15dp">
-
-                        <TextView
-                            android:id="@+id/EDTfecha2"
-                            android:layout_width="150dp"
-                            android:layout_height="40dp"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="14dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:hint=" Fecha Nacimiento"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <Button
-                            android:id="@+id/BTNbuscarfecha"
-                            android:layout_width="173dp"
-                            android:layout_height="42dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="20dp"
-                            android:layout_marginRight="20dp"
-                            android:background="@drawable/button_rounded_border"
-                            android:text="SELECCIONAR FECHA"
-                            android:textColor="#FFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/EDTtelefono"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginRight="10dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  Teléfono"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toStartOf="@+id/EDTemail"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <EditText
-                            android:id="@+id/EDTemail"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginRight="16dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  E-mail"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                    </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <EditText
-                        android:id="@+id/EDTpeso"
-                        android:layout_width="54dp"
-                        android:layout_height="45dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="5dp"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:ems="10"
-                        android:hint="  Peso"
-                        android:inputType="number"
-                        android:textColor="#FFFFFF"
-                        android:textColorHint="#FFFFFF"
-                        android:textSize="13sp"
-                        android:textStyle="bold"
-                        app:layout_constraintStart_toStartOf="parent" />
-
-                    <EditText
-                        android:id="@+id/EDTreferencia"
-                        android:layout_width="153dp"
-                        android:layout_height="45dp"
-                        android:layout_marginStart="1dp"
-                        android:layout_marginLeft="1dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="1dp"
-                        android:layout_marginRight="1dp"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:ems="10"
-                        android:hint="  Referencia"
-                        android:inputType="textPersonName"
-                        android:textColor="#FFFFFF"
-                        android:textColorHint="#FFFFFF"
-                        android:textSize="13sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toStartOf="@+id/EDTpapanicolau"
-                        app:layout_constraintStart_toEndOf="@+id/EDTpeso" />
-
-                    <EditText
-                        android:id="@+id/EDTpapanicolau"
-                        android:layout_width="153dp"
-                        android:layout_height="45dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginRight="5dp"
-                        android:backgroundTint="@color/colorPrimary"
-                        android:ems="10"
-                        android:hint="  Papanicolau"
-                        android:inputType="textPersonName"
-                        android:textColor="#FFFFFF"
-                        android:textColorHint="#FFFFFF"
-                        android:textSize="13sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent" />
-
-                </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="109dp"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/EDTotrosdatos"
-                            android:layout_width="400dp"
-                            android:layout_height="100dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginRight="5dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="                                  Otros Datos"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            tools:ignore="MissingConstraints" />
-
-                    </LinearLayout>
-
-                    <ListView
-                        android:id="@+id/LVpacientes"
-                        android:layout_width="400dp"
-                        android:layout_height="190dp"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginEnd="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="10dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        tools:ignore="MissingConstraints" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:id="@+id/tab2">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/EDTnombrefac"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginRight="10dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  Nombre"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <EditText
-                            android:id="@+id/EDTemailfac"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginRight="16dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  E-mail"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/EDTrfcfac"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginRight="10dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  R.F.C"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <EditText
-                            android:id="@+id/EDTdomiciliofac"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginRight="16dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  Domicilio"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="109dp"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/EDTotrosdatosfac"
-                            android:layout_width="400dp"
-                            android:layout_height="100dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginRight="5dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="                                  Otros Datos"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            tools:ignore="MissingConstraints" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <Button
-                            android:id="@+id/BTNagregarfactura"
-                            android:layout_width="175dp"
-                            android:layout_height="44dp"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginEnd="20dp"
-                            android:layout_marginRight="20dp"
-                            android:background="@drawable/button_rounded"
-                            android:text="AGREGAR FACTURA"
-                            android:textColor="#FFF"
-                            android:textSize="17sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:id="@+id/tab3">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/EDTtitularclub"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginRight="10dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  Titular"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <EditText
-                            android:id="@+id/EDTtarjetaclub"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginRight="16dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  Tarjeta"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/EDTempresaclub"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginRight="16dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  Empresa"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="15dp">
-
-                        <TextView
-                            android:id="@+id/TXTvigenciaclub"
-                            android:layout_width="150dp"
-                            android:layout_height="40dp"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="14dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:hint=" Vigencia"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <Button
-                            android:id="@+id/BTNvigenciaclub"
-                            android:layout_width="173dp"
-                            android:layout_height="42dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="20dp"
-                            android:layout_marginRight="20dp"
-                            android:background="@drawable/button_rounded_border"
-                            android:text="SELECCIONAR VIGENCIA"
-                            android:textColor="#FFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="109dp"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/EDTotrosdatosclub"
-                            android:layout_width="400dp"
-                            android:layout_height="100dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginRight="5dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="                                  Otros Datos"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            tools:ignore="MissingConstraints" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:id="@+id/tab4">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/EDTbanco"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginRight="10dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  Banco"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <EditText
-                            android:id="@+id/EDTtarjetabanco"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginRight="16dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  No. Nómina/Tarjeta"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="109dp"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/EDTotrosdatosbanco"
-                            android:layout_width="400dp"
-                            android:layout_height="100dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginRight="5dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="                                  Otros Datos"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            tools:ignore="MissingConstraints" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:id="@+id/tab5">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/EDTg"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginRight="10dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  G -"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <EditText
-                            android:id="@+id/EDTp"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginRight="16dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  P-"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/EDTc"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginLeft="10dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="10dp"
-                            android:layout_marginRight="10dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  C -"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <EditText
-                            android:id="@+id/EDTa"
-                            android:layout_width="155dp"
-                            android:layout_height="45dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="16dp"
-                            android:layout_marginRight="16dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="  A -"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginBottom="15dp">
-
-                        <TextView
-                            android:id="@+id/TXTfum"
-                            android:layout_width="150dp"
-                            android:layout_height="40dp"
-                            android:layout_marginStart="20dp"
-                            android:layout_marginLeft="20dp"
-                            android:layout_marginTop="14dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:hint=" FUM"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintStart_toStartOf="parent" />
-
-                        <Button
-                            android:id="@+id/BTNfum"
-                            android:layout_width="173dp"
-                            android:layout_height="42dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="20dp"
-                            android:layout_marginRight="20dp"
-                            android:background="@drawable/button_rounded_border"
-                            android:text="SELECCIONAR FUM"
-                            android:textColor="#FFF"
-                            android:textSize="13sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="109dp"
-                        android:orientation="horizontal">
-
-                        <EditText
-                            android:id="@+id/EDTotrosdatoseco"
-                            android:layout_width="400dp"
-                            android:layout_height="100dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginEnd="5dp"
-                            android:layout_marginRight="5dp"
-                            android:backgroundTint="@color/colorPrimary"
-                            android:ems="10"
-                            android:hint="                                  Otros Datos"
-                            android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#FFFFFF"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            tools:ignore="MissingConstraints" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </FrameLayout>
-
-    </ScrollView>
-
-    </LinearLayout>
-</TabHost>
-
-</LinearLayout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/constraintLayout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="@color/consultorio_background_blue"
+	android:orientation="vertical"
+	tools:context="com.Milton.Consultorio.Activity.TabsPacientesActivity">
+
+
+	<EditText
+		android:id="@+id/EDTnombre"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="28dp"
+		android:layout_marginLeft="28dp"
+		android:layout_marginTop="56dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Nombre del paciente"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="20sp"
+		android:textStyle="bold"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+
+	<Button
+		android:id="@+id/BTNbuscar"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="604dp"
+		android:layout_marginEnd="264dp"
+		android:layout_marginRight="264dp"
+		android:background="@drawable/button_rounded"
+		android:text="BUSCAR"
+		android:textColor="#FFF"
+		android:textSize="20sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:ignore="MissingConstraints" />
+
+	<Button
+		android:id="@+id/BTNagregar"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/button_rounded_border"
+		android:text="NUEVO"
+		android:textColor="#FFF"
+		android:textSize="20sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.038"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="128dp" />
+
+	<Button
+		android:id="@+id/BTNactualizar"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/button_rounded_border"
+		android:text="ACTUALIZAR"
+		android:textColor="#FFF"
+		android:textSize="20sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toStartOf="@+id/BTNeliminar"
+		app:layout_constraintStart_toEndOf="@+id/BTNagregar"
+		tools:ignore="MissingConstraints" />
+
+
+	<Button
+		android:id="@+id/BTNeliminar"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="76dp"
+		android:layout_marginRight="76dp"
+		android:background="@drawable/button_rounded_border"
+		android:text="ELIMINAR"
+		android:textColor="#FFF"
+		android:textSize="20sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:ignore="MissingConstraints"
+		tools:layout_editor_absoluteY="416dp" />
+
+	<TabWidget
+		android:id="@android:id/tabs"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+
+
+	<EditText
+		android:id="@+id/TXTnombre"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:text="Nombre del Paciente"
+		android:textColor="#F38D27"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
+		app:layout_constraintHorizontal_bias="0.672"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="542dp" />
+
+
+	<EditText
+		android:id="@+id/TXTconyuge"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="492dp"
+		android:layout_marginRight="492dp"
+		android:ems="10"
+		android:text="Nombre del Conyuge"
+		android:textColor="#F38D27"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="130dp" />
+
+	<EditText
+		android:id="@+id/EDTnombre2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Paciente"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
+		app:layout_constraintHorizontal_bias="0.345"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="330dp" />
+
+
+	<EditText
+		android:id="@+id/EDTconyugue"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="140dp"
+		android:layout_marginRight="140dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Conyuge"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="143dp" />
+
+	<Spinner
+		android:id="@+id/SPecivil"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="504dp"
+		android:layout_marginLeft="504dp"
+		android:backgroundTint="@color/colorPrimary"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="362dp" />
+
+
+	<Spinner
+		android:id="@+id/SPtipopaciente"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="352dp"
+		android:layout_marginRight="352dp"
+		android:backgroundTint="@color/colorPrimary"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="912dp" />
+
+	<Spinner
+		android:id="@+id/SPsexo"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		app:layout_constraintEnd_toStartOf="@+id/SPtipopaciente"
+		app:layout_constraintHorizontal_bias="0.784"
+		app:layout_constraintStart_toEndOf="@+id/SPecivil"
+		tools:layout_editor_absoluteY="837dp" />
+
+	<TextView
+		android:id="@+id/EDTfecha2"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="492dp"
+		android:layout_marginLeft="492dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:hint=" Fecha Nacimiento"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="428dp" />
+
+
+	<Button
+		android:id="@+id/BTNbuscarfecha"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="332dp"
+		android:layout_marginRight="332dp"
+		android:background="@drawable/button_rounded_border"
+		android:text="SELECCIONAR FECHA"
+		android:textColor="#FFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="70dp" />
+
+	<EditText
+		android:id="@+id/EDTtelefono"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Teléfono"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toStartOf="@+id/EDTemail"
+		app:layout_constraintHorizontal_bias="0.82"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="949dp" />
+
+
+	<EditText
+		android:id="@+id/EDTemail"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="464dp"
+		android:layout_marginRight="464dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="E-mail"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="386dp" />
+
+	<EditText
+		android:id="@+id/EDTpeso"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="132dp"
+		android:layout_marginLeft="132dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Peso"
+		android:inputType="number"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="282dp" />
+
+	<EditText
+		android:id="@+id/EDTreferencia"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Referencia"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toStartOf="@+id/EDTpapanicolau"
+		app:layout_constraintHorizontal_bias="1.0"
+		app:layout_constraintStart_toEndOf="@+id/EDTpeso"
+		tools:layout_editor_absoluteY="224dp" />
+
+
+	<EditText
+		android:id="@+id/EDTpapanicolau"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="60dp"
+		android:layout_marginRight="60dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Papanicolau"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="291dp" />
+
+	<EditText
+		android:id="@+id/EDTotrosdatos"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Otros Datos"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.78"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:ignore="MissingConstraints"
+		tools:layout_editor_absoluteY="1029dp" />
+
+	<ListView
+		android:id="@+id/LVpacientes"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:ignore="MissingConstraints" />
+
+
+	<EditText
+		android:id="@+id/EDTnombrefac"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Nombre"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
+		app:layout_constraintHorizontal_bias="0.493"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="873dp" />
+
+
+	<EditText
+		android:id="@+id/EDTemailfac"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="76dp"
+		android:layout_marginRight="76dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="E-mail"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="724dp" />
+
+	<EditText
+		android:id="@+id/EDTrfcfac"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="R.F.C"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
+		app:layout_constraintHorizontal_bias="0.683"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="702dp" />
+
+
+	<EditText
+		android:id="@+id/EDTdomiciliofac"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="696dp"
+		android:layout_marginRight="696dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Domicilio"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="588dp" />
+
+	<EditText
+		android:id="@+id/EDTotrosdatosfac"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Otros Datos"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.167"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:ignore="MissingConstraints"
+		tools:layout_editor_absoluteY="1006dp" />
+
+	<Button
+		android:id="@+id/BTNagregarfactura"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="@drawable/button_rounded"
+		android:text="AGREGAR FACTURA"
+		android:textColor="#FFF"
+		android:textSize="17sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.256"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="940dp" />
+
+	<EditText
+		android:id="@+id/EDTtitularclub"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Titular"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
+		app:layout_constraintHorizontal_bias="0.557"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="641dp" />
+
+
+	<EditText
+		android:id="@+id/EDTtarjetaclub"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="688dp"
+		android:layout_marginRight="688dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Tarjeta"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="702dp" />
+
+	<EditText
+		android:id="@+id/EDTempresaclub"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="680dp"
+		android:layout_marginRight="680dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Empresa"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="1098dp" />
+
+	<TextView
+		android:id="@+id/TXTvigenciaclub"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="604dp"
+		android:layout_marginLeft="604dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:hint=" Vigencia"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="588dp" />
+
+
+	<Button
+		android:id="@+id/BTNvigenciaclub"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="88dp"
+		android:layout_marginRight="88dp"
+		android:background="@drawable/button_rounded_border"
+		android:text="SELECCIONAR VIGENCIA"
+		android:textColor="#FFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="928dp" />
+
+	<EditText
+		android:id="@+id/EDTotrosdatosclub"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Otros Datos"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.667"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:ignore="MissingConstraints"
+		tools:layout_editor_absoluteY="815dp" />
+
+	<EditText
+		android:id="@+id/EDTbanco"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Banco"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
+		app:layout_constraintHorizontal_bias="0.551"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="446dp" />
+
+
+	<EditText
+		android:id="@+id/EDTtarjetabanco"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="428dp"
+		android:layout_marginRight="428dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="No. Nómina/Tarjeta"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="1059dp" />
+
+	<EditText
+		android:id="@+id/EDTotrosdatosbanco"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Otros Datos"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.024"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:ignore="MissingConstraints"
+		tools:layout_editor_absoluteY="496dp" />
+
+	<EditText
+		android:id="@+id/EDTg"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="G -"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toStartOf="@+id/EDTconyugue"
+		app:layout_constraintHorizontal_bias="0.146"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="416dp" />
+
+
+	<EditText
+		android:id="@+id/EDTp"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="212dp"
+		android:layout_marginRight="212dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="P-"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="663dp" />
+
+	<EditText
+		android:id="@+id/EDTc"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="C -"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		tools:layout_editor_absoluteX="163dp"
+		tools:layout_editor_absoluteY="214dp" />
+
+
+	<EditText
+		android:id="@+id/EDTa"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="200dp"
+		android:layout_marginRight="200dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="A -"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="496dp" />
+
+	<TextView
+		android:id="@+id/TXTfum"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="416dp"
+		android:layout_marginLeft="416dp"
+		android:backgroundTint="@color/colorPrimary"
+		android:hint="FUM"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:layout_editor_absoluteY="312dp" />
+
+
+	<Button
+		android:id="@+id/BTNfum"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="244dp"
+		android:layout_marginRight="244dp"
+		android:background="@drawable/button_rounded_border"
+		android:text="SELECCIONAR FUM"
+		android:textColor="#FFF"
+		android:textSize="13sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		tools:layout_editor_absoluteY="741dp" />
+
+	<EditText
+		android:id="@+id/EDTotrosdatoseco"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:backgroundTint="@color/colorPrimary"
+		android:ems="10"
+		android:hint="Otros Datos"
+		android:inputType="textPersonName"
+		android:textColor="#FFFFFF"
+		android:textColorHint="#FFFFFF"
+		android:textSize="18sp"
+		android:textStyle="bold"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintHorizontal_bias="0.0"
+		app:layout_constraintStart_toStartOf="parent"
+		tools:ignore="MissingConstraints"
+		tools:layout_editor_absoluteY="778dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

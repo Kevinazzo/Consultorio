@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#202732"
-        tools:context=".Registro">
+        tools:context="com.Milton.Consultorio.Activity.RegistroActivity">
 
         <EditText
             android:id="@+id/EditT_email"
