@@ -42,7 +42,7 @@
 						android:autoSizeTextType="uniform"
 						android:text="G-"
 						android:textColor="@color/DefaultTextColor"
-						android:textSize="@dimen/TextSize_Small" />
+						android:textSize="@dimen/TextSize_Small2" />
 
 					<EditText
 						android:id="@+id/Tab5_EditT__G-"
@@ -73,7 +73,7 @@
 						android:autoSizeTextType="uniform"
 						android:text="P-"
 						android:textColor="@color/DefaultTextColor"
-						android:textSize="@dimen/TextSize_Small" />
+						android:textSize="@dimen/TextSize_Small2" />
 
 					<EditText
 						android:id="@+id/Tab5_EditT__P-"
@@ -112,7 +112,7 @@
 						android:autoSizeTextType="uniform"
 						android:text="C-"
 						android:textColor="@color/DefaultTextColor"
-						android:textSize="@dimen/TextSize_Small" />
+						android:textSize="@dimen/TextSize_Small2" />
 
 					<EditText
 						android:id="@+id/Tab5_EditT__C-"
@@ -143,7 +143,7 @@
 						android:autoSizeTextType="uniform"
 						android:text="A-"
 						android:textColor="@color/DefaultTextColor"
-						android:textSize="@dimen/TextSize_Small" />
+						android:textSize="@dimen/TextSize_Small2" />
 
 					<EditText
 						android:id="@+id/Tab5_EditT__A-"
@@ -179,7 +179,7 @@
 					android:textColor="@color/DefaultTextColor"
 					android:textAlignment="center"
 					android:textColorHint="@color/DefaultTextColor"
-					android:textSize="@dimen/TextSize_Small2"
+					android:textSize="@dimen/TextSize_Medium"
 					android:textStyle="bold" />
 
 				<Button
@@ -194,7 +194,7 @@
 					android:background="@drawable/button_rounded_border"
 					android:text="SELECCIONAR FUM"
 					android:textColor="#FFF"
-					android:textSize="@dimen/TextSize_Small"
+					android:textSize="@dimen/TextSize_Small2"
 					android:textStyle="bold" />
 			</LinearLayout>
 
@@ -212,7 +212,7 @@
 					android:autoSizeTextType="uniform"
 					android:text="Otros Datos"
 					android:textColor="@color/DefaultTextColor"
-					android:textSize="@dimen/TextSize_Small" />
+					android:textSize="@dimen/TextSize_Small2" />
 
 				<EditText
 					android:id="@+id/Tab5_EditT_Otro"
@@ -226,7 +226,7 @@
 					android:lines="5"
 					android:textColor="@color/DefaultTextColor"
 					android:textColorHint="@color/DefaultTextColor"
-					android:textSize="@dimen/TextSize_Small"
+					android:textSize="@dimen/TextSize_Small2"
 					android:textStyle="italic" />
 			</LinearLayout>
 		</LinearLayout>

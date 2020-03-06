@@ -1,4 +1,4 @@
-package com.Milton.Consultorio.Fragment;
+package com.Milton.Consultorio.Adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;

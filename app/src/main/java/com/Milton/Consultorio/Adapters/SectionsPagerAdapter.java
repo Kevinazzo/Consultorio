@@ -1,4 +1,4 @@
-package com.Milton.Consultorio.main;
+package com.Milton.Consultorio.Adapters;
 
 import android.content.Context;
 
@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import com.Milton.Consultorio.Fragment.PlaceholderFragment;
 import com.Milton.Consultorio.R;
 
 /**

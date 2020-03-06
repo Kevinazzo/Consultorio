@@ -22,7 +22,7 @@ import android.widget.Toast;
 import com.Milton.Consultorio.Network.FacturaRequest;
 import com.Milton.Consultorio.MiExepcion;
 import com.Milton.Consultorio.Model.Paciente;
-import com.Milton.Consultorio.Fragment.UsersAdapter;
+import com.Milton.Consultorio.Adapters.UsersAdapter;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;

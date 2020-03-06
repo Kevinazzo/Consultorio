@@ -74,7 +74,8 @@ public class LoginActivity extends AppCompatActivity {
 
                                         LimpiarControles();
 
-                                        Intent intent = new Intent(LoginActivity.this, TabsPacientesActivity.class);
+//                                        Intent intent = new Intent(LoginActivity.this, TabsPacientesActivity.class);
+                                        Intent intent = new Intent(LoginActivity.this, PacientesActivity.class);
                                         LoginActivity.this.startActivity(intent);
                                     }else{
                                         Toast.makeText(getApplicationContext(), "¡¡ERROR!! Usuario o Contraseña incorrectos", Toast.LENGTH_SHORT).show();

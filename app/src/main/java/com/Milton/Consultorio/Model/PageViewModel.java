@@ -1,4 +1,4 @@
-package com.Milton.Consultorio.main;
+package com.Milton.Consultorio.Model;
 
 import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;

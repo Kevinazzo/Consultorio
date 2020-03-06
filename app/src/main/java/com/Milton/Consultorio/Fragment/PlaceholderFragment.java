@@ -1,9 +1,11 @@
-package com.Milton.Consultorio.main;
+package com.Milton.Consultorio.Fragment;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProviders;
+
+import com.Milton.Consultorio.Model.PageViewModel;
 
 /**
  * A placeholder fragment containing a simple view.
