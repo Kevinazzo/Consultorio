@@ -222,7 +222,7 @@
 					android:layout_marginBottom="10dp"
 					android:autofillHints=""
 					android:backgroundTint="@color/colorPrimary"
-					android:inputType="text|phone"
+					android:inputType="text"
 					android:lines="5"
 					android:textColor="@color/DefaultTextColor"
 					android:textColorHint="@color/DefaultTextColor"

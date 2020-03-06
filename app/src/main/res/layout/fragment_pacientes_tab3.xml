@@ -85,7 +85,7 @@
 						android:autoSizeTextType="uniform"
 						android:autofillHints="Cónyugue"
 						android:hint="..."
-						android:inputType="textPersonName"
+						android:inputType="text|number"
 						android:textColor="#FFFFFF"
 						android:textColorHint="#FFFFFF" />
 				</LinearLayout>
@@ -184,7 +184,7 @@
 						android:layout_marginBottom="10dp"
 						android:autofillHints=""
 						android:backgroundTint="@color/colorPrimary"
-						android:inputType="text|phone"
+						android:inputType="text"
 						android:lines="5"
 						android:textColor="#FFFFFF"
 						android:textColorHint="#FFFFFF"
