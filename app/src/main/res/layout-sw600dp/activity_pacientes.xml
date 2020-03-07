@@ -10,7 +10,7 @@
 
 
 	<Button
-		android:id="@+id/BTNagregar2"
+		android:id="@+id/Pacientes_Btn_Nuevo"
 		android:layout_width="98dp"
 		android:layout_height="35dp"
 		android:layout_marginStart="8dp"
@@ -20,11 +20,11 @@
 		android:textColor="#FFF"
 		android:textSize="13sp"
 		android:textStyle="bold"
-		app:layout_constraintStart_toEndOf="@+id/BTNeliminar2"
+		app:layout_constraintStart_toEndOf="@+id/Pacientes_Btn_Eliminar"
 		app:layout_constraintTop_toTopOf="parent" />
 
 	<Button
-		android:id="@+id/BTNeliminar2"
+		android:id="@+id/Pacientes_Btn_Eliminar"
 		android:layout_width="98dp"
 		android:layout_height="35dp"
 		android:layout_marginTop="12dp"
@@ -35,12 +35,12 @@
 		android:textStyle="bold"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.025"
-		app:layout_constraintStart_toEndOf="@+id/BTNbuscar2"
+		app:layout_constraintStart_toEndOf="@+id/Pacientes_Btn_Buscar"
 		app:layout_constraintTop_toTopOf="parent"
 		tools:ignore="MissingConstraints" />
 
 	<Button
-		android:id="@+id/BTNactualizar2"
+		android:id="@+id/Pacientes_Btn_Actualizar"
 		android:layout_width="98dp"
 		android:layout_height="35dp"
 		android:layout_marginStart="8dp"
@@ -50,12 +50,12 @@
 		android:textColor="#FFF"
 		android:textSize="13sp"
 		android:textStyle="bold"
-		app:layout_constraintStart_toEndOf="@+id/BTNagregar2"
+		app:layout_constraintStart_toEndOf="@+id/Pacientes_Btn_Nuevo"
 		app:layout_constraintTop_toTopOf="parent"
 		tools:ignore="MissingConstraints" />
 
 	<Button
-		android:id="@+id/BTNbuscar2"
+		android:id="@+id/Pacientes_Btn_Buscar"
 		android:layout_width="88dp"
 		android:layout_height="39dp"
 		android:layout_marginTop="12dp"
@@ -66,12 +66,12 @@
 		android:textStyle="bold"
 		app:layout_constraintEnd_toEndOf="parent"
 		app:layout_constraintHorizontal_bias="0.018"
-		app:layout_constraintStart_toEndOf="@+id/Pacientes_EditTxt_NombrePaciente"
+		app:layout_constraintStart_toEndOf="@+id/Pacientes_EditTxt_SearchBar"
 		app:layout_constraintTop_toTopOf="parent"
 		tools:ignore="MissingConstraints" />
 
 	<EditText
-		android:id="@+id/Pacientes_EditTxt_NombrePaciente"
+		android:id="@+id/Pacientes_EditTxt_SearchBar"
 		android:layout_width="196dp"
 		android:layout_height="wrap_content"
 		android:layout_marginStart="16dp"

@@ -45,7 +45,7 @@
 						android:textSize="@dimen/TextSize_Small2" />
 
 					<EditText
-						android:id="@+id/Tab1_EditT_Paciente"
+						android:id="@+id/Tab2_EditT_NombrePaciente"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
 						android:layout_marginLeft="20dp"

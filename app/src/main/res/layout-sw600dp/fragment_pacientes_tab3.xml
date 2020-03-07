@@ -76,7 +76,7 @@
 						android:textSize="@dimen/TextSize_Small2" />
 
 					<EditText
-						android:id="@+id/Tab1_EditT_NumTarjeta"
+						android:id="@+id/Tab3_EditT_NumTarjeta"
 						android:layout_width="match_parent"
 						android:layout_height="wrap_content"
 						android:layout_marginLeft="10dp"
@@ -180,7 +180,7 @@
 						android:layout_marginBottom="10dp"
 						android:autofillHints=""
 						android:backgroundTint="@color/colorPrimary"
-						android:inputType="text"
+						android:inputType="textNoSuggestions"
 						android:lines="5"
 						android:textColor="#FFFFFF"
 						android:textColorHint="#FFFFFF"

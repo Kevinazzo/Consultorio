@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
-	android:id="@+id/ScrollView"
+	android:id="@+id/Tab1_Fragment_Parent"
 	android:layout_width="match_parent"
 	android:layout_height="450dp"
 	android:background="@color/consultorio_background_blue"
@@ -38,7 +38,7 @@
 					android:textSize="@dimen/TextSize_Small" />
 
 				<EditText
-					android:id="@+id/Tab1_EditT_Paciente"
+					android:id="@+id/Tab1_EditT_NombrePaciente"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:layout_marginLeft="10dp"
@@ -107,7 +107,7 @@
 					android:textSize="@dimen/TextSize_Small" />
 
 				<Spinner
-					android:id="@+id/Tab1_Spn_PECivil"
+					android:id="@+id/Tab1_Spn_ECivil"
 					android:layout_width="match_parent"
 					android:layout_height="40dp"
 					android:layout_marginHorizontal="10dp"
@@ -417,7 +417,7 @@
 					android:layout_marginBottom="10dp"
 					android:autofillHints=""
 					android:backgroundTint="@color/colorPrimary"
-					android:inputType="text|phone"
+					android:inputType="textNoSuggestions"
 					android:lines="5"
 					android:textColor="#FFFFFF"
 					android:textColorHint="#FFFFFF"
@@ -448,9 +448,10 @@
 					android:textSize="@dimen/TextSize_Small" />
 
 				<ListView
-					android:id="@+id/Tab1_Lview_ListaPacientes"
+					android:id="@+id/Tab1_Lview_ResultsLista"
+					android:nestedScrollingEnabled="true"
 					android:layout_width="match_parent"
-					android:layout_height="fill_parent"
+					android:layout_height="150dp"
 					android:layout_marginStart="10dp"
 					android:layout_marginLeft="10dp"
 					android:layout_marginEnd="5dp"
@@ -459,4 +460,4 @@
 			</LinearLayout>
 		</LinearLayout>
 	</LinearLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
