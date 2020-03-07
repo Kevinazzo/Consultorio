@@ -309,7 +309,7 @@ public class PacientesActivity extends AppCompatActivity implements View.OnClick
 		});
 		//endregion
 
-		//Botón eliminar onClick listener
+		//region Botón eliminar onClick listener
 		btn_Eliminar.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -359,6 +359,7 @@ public class PacientesActivity extends AppCompatActivity implements View.OnClick
 				}
 			}
 		});
+		//endregion
 	}
 
 
